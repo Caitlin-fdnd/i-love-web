@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<H1>Daily checkout 19/11</H1>
+<H2>Waarom heeft elke input een label nodig?</H2>
+<p>Elke input heeft een label nodig zodat mobiele gebruikers automatisch het juiste toetsenbord krijgen wanneer ze het invullen
+ en zodat de browser kan valideren wanneer iets een valid of invalid input is.</p>
+  <label for="name">naam:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="wachtwoord">wachtwoord:</label><br>
+  <input type="password" id="wachtwoord" name="wachtwoord"><br><br>
+  <p>De text input is gewoon text, de password input wordt verborgen met puntjes.</p>
+
+  <H2>Wat doe je met de attributen type, autocomplete, inputmode en enterkeyhint?</H2>
+  <p>Het attribuut "type" bepaalt wat voor formulier het is, bijvoorbeeld type="text"</p>
+  <input type="text" id="name" name="name"><br>
+
+  <p>Het attribuut "autocomplete" zorgt ervoor dat je automatisch aanbevelingen krijgt voor autofill opties</p>
+  <input type="text" id="name" name="name" autocomplete="given-name"><br>
+
+  <p>Het attribuut "inputmode" bepaalt wat voor soort toetsenbord een gebruiker krijgt bij het invullen van een veld.</p>
+  <input type="tel" id="nummer" name="tel-nummer"><br>
+
+  <p>Het attribuut "enterkeyhint" bepaalt hoe enter knoppen eruit zijn op virtuele keyboards.</p>
+  <input enterkeyhint="send" />
+  <input type="submit" value="Submit">
+
+  <H2>Wat doen fieldsets en legends in een formulier?</H2>
+  <p>De "fieldset" label groepeert formulier elementen in die bij elkaar horen in code. </p><br />
+  <p>De "legend" label is de benaming voor de fieldset groep waar hij in zit.</p>
+
+  <fieldset>
+  <legend>kleuren</legend>
+  <input type="radio" id="Eerste-kleur">
+  <label for="Eerste-kleur">Paars</label>
+   <input type="radio" id="Tweede-kleur">
+  <label for="Tweede-kleur">Blauw</label>
+   <input type="radio" id="Derde-kleur">
+  <label for="Derde-kleur">Bordeaux</label>
+  </fieldset>
+
+  <H2>Wat doen required, maxlength, min, max en step?</H2>
+  <p>required zorgt ervoor dat een veld verplicht wordt en je dus niet verder kan totdat hij is ingevuld.</p>
+  <fieldset>
+  <label for="wachtwoord">wachtwoord:</label><br>
+  <input type="password" required />
+  <id="wachtwoord" name="wachtwoord"><br>
+  <input type="submit" value="Submit">
+  </fieldset>
+  <p>Maxlength, min en max bepalen hoe groot/klein/lang/kort de input moet zijn.</p>
+    <label for="datemax">Een datum voor 2025-12-01:</label>
+  <input type="date" id="datemax" name="datemax" max="2025-11-30"><br><br>
+
+  <label for="datemin">Een datum na 1900-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="1900-01-02"><br><br>
+
+  <label for="quantity">Een nummer tussen 0 en 10:</label>
+  <input type="number" id="quantity" name="quantity" min="0" max="10"><br><br>
+
+  <p>Step bepaalt in hoe grote stappen een numerieke input kan verplaatsen</p>
+  <label for="quantity">Nummers in stappen van 2</label>
+  <input type="number" id="quantity" name="quantity" step="2"><br><br>
