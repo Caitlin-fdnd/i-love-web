@@ -23,7 +23,7 @@ function close() {
 
 
 const theater = document.querySelector('.Theater')
-const layers = document.querySelectorAll('.frontlayer, .midlayer, .backlayer')
+const layers = document.querySelectorAll('.frontlayer, .midlayer, .backlayer, .midoblayer')
 
 theater.addEventListener('mousemove', (e) => {
     const rect = theater.getBoundingClientRect()
@@ -34,9 +34,10 @@ theater.addEventListener('mousemove', (e) => {
     layers.forEach(layer => {
         let depth = 0
 
-        if (layer.classList.contains('backlayer')) depth = 20
-        if (layer.classList.contains('midlayer')) depth = 10
-        if (layer.classList.contains('frontlayer')) depth = 30
+        if (layer.classList.contains('backlayer')) depth = 10
+        if (layer.classList.contains('midlayer')) depth = 20
+        if (layer.classList.contains('midoblayer')) depth = 30
+        if (layer.classList.contains('frontlayer')) depth = 60
 
         layer.style.transform =
             `${layer.dataset.baseTransform} translate(${x * depth}px, ${y * depth}px)`
