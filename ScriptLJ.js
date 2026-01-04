@@ -37,7 +37,7 @@ theater.addEventListener('mousemove', (e) => {
         if (layer.classList.contains('backlayer')) depth = 10
         if (layer.classList.contains('midlayer')) depth = 20
         if (layer.classList.contains('midoblayer')) depth = 30
-        if (layer.classList.contains('frontlayer')) depth = 60
+        if (layer.classList.contains('frontlayer')) depth = 70
 
         layer.style.transform =
             `${layer.dataset.baseTransform} translate(${x * depth}px, ${y * depth}px)`
