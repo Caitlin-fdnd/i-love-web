@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.Theater {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: saturate(1.3), brightness(1.2);
+}
+
+#Border {
+    align-self: center;
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    z-index: 50;
+    pointer-events: none;
+    margin-bottom: 1em;
+}
+
+#DoekL {
+    align-self: center;
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    z-index: 40;
+    transform: translateX(-14em);
+    pointer-events: none;
+}
+
+.DoekLAnimatie {
+    animation: DoekLAni 1s forwards;
+}
+
+@keyframes DoekLAni {
+
+    0% {
+        transform: translateX(-14em);
+        width: 40%;
+    }
+
+    100% {
+        transform: translateX(-27em);
+        width: 5%;
+    }
+}
+
+#DoekR {
+    align-self: center;
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    z-index: 40;
+    transform: translateX(14em);
+    pointer-events: none;
+}
+
+.DoekRAnimatie {
+    animation: DoekRAni 1s forwards;
+}
+
+@keyframes DoekRAni {
+
+    0% {
+        transform: translateX(14em);
+        width: 40%;
+    }
+
+    100% {
+        transform: translateX(27em);
+        width: 5%;
+    }
+}
+
+#Doekal {
+    align-self: center;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: 35;
+    pointer-events: none;
+
+}
+
+#Object3 {
+    align-self: center;
+    position: absolute;
+    width: 15%;
+    height: 60%;
+    z-index: 30;
+    transform: translate(18em, 4em);
+
+    &:hover {
+        filter: brightness(1.5);
+    }
+}
+
+#Object2 {
+    align-self: center;
+    position: absolute;
+    width: 15%;
+    height: 60%;
+    z-index: 30;
+    transform: translate(0, 4em);
+
+    &:hover {
+        filter: brightness(1.5);
+    }
+}
+
+#Object1 {
+    align-self: center;
+    position: absolute;
+    width: 15%;
+    height: 60%;
+    z-index: 30;
+    transform: translate(-23em, -7em);
+
+    &:hover {
+        filter: brightness(1.5);
+    }
+}
+
+#Maan {
+    align-self: center;
+    position: absolute;
+    width: 10%;
+    height: 22%;
+    z-index: 20;
+    margin-left: 40em;
+    margin-bottom: 13em;
+    filter: brightness(140%);
+}
+
+.MaanAnimatie {
+    animation-name: MaanAni;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes MaanAni {
+
+    0% {
+        transform: none;
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate(20deg);
+    }
+
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+#Achtergrond {
+    align-self: center;
+    position: absolute;
+    width: 65%;
+    height: 80%;
+    z-index: 10;
+    filter: brightness(80%);
+}
