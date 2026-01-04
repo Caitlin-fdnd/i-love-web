@@ -134,8 +134,7 @@ body {
 #Maan {
     align-self: center;
     position: absolute;
-    width: 10%;
-    height: 22%;
+    width: 7em;
     z-index: 20;
     margin-left: 40em;
     margin-bottom: 13em;
