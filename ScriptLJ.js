@@ -34,7 +34,7 @@ theater.addEventListener('mousemove', (e) => {
     layers.forEach(layer => {
         let depth = 0
 
-        if (layer.classList.contains('backlayer')) depth = -20
+        if (layer.classList.contains('backlayer')) depth = -30
         if (layer.classList.contains('midlayer')) depth = 20
         if (layer.classList.contains('midoblayer')) depth = 30
         if (layer.classList.contains('frontlayer')) depth = 60
